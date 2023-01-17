@@ -1,13 +1,41 @@
+
+@import url(../css/fonts.css);
+
 html,body{
 
     margin: 0%;
     box-sizing: border-box;
     overflow-x: hidden;
 }
+
+
+:root{
+
+    /*Theme Colors*/
+    --text-gray: #3f4954;
+    --text-light: #686666da;
+    --bg-color:#0f0f0f;
+    --white:#ffffff;
+    --midnight:#104f55;
+
+    /*Gradiant colors*/
+    --sky:linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+
+    /*font family*/
+
+    --Abel:"Abel",cursive;
+    --Anton:"Anton",cursive;
+    --Josefin:"Josefin",cursive;
+    --Lexend:"Lexend",cursive;
+    --Livvic:"Livvic",cursive;
+}
 /*.......................gloable classes...................*/
 
 a{
     text-decoration: none;
+    color: var(--text-gray);
+
 }
 
 .flex-row{
@@ -17,10 +45,45 @@ a{
 }
 
 ul{
-        
+
     list-style: none;
+}
+
+h1{
+
+    font-family: var(--Lexend);
+    font-size: 2.5rem;
 
 }
+
+h3{
+
+    font-family: var(--Abel);
+    font-size: 1.3rem;
+
+}
+
+h2{
+
+    font-family: var(--Lexend);
+    font-size: 1.3rem;
+}
+
+button.btn{
+
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor: pointer;
+}
+
+span{
+
+    font-family: var(--Abel);
+}
+
 
 /*.......................gloable classes...................*/
 
@@ -30,7 +93,7 @@ ul{
 
     background: white;
     padding: 1rem;
-    height: 40rem;
+    height: 5rem;
     min-height: 10vh;
     overflow: hidden;
 }
@@ -39,11 +102,36 @@ ul{
     font-size: 1.5rem;
     padding: 1rem;
     display: block;
+    font-family: var(--Lexend);
+    font-size: 1.6rem;
 }
 
 .nav-menu{
     justify-content: space-between;
-   
+}
+.nav .toggle-collapce{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapce .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapce .toggle-icons i{
+
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+.collapse{
+
+    height:30rem;
 }
 
 .nav-items{
@@ -57,10 +145,135 @@ ul{
     padding: 1.6rem 1rem;
     font-size: 1.1rem;
     position: relative;
+    font-family:var(--Abel);
+}
+
+.nav-link:hover{
+
+    background-color: var(--midnight);
+    border-radius: 8px;
+    box-shadow: #0f0f0f;
+}
+.nav-link:hover a{
+
+    color: var(--white);
 }
 
 .social{
     padding: 1.4rem;
+}
 
+.social i{
+    padding: 0.2rem;
+}
+
+.social i:hover{
+    color: #0996d7;
 }
 /*.............................navigation bar.............................*/
+
+
+/* ------------------Main Content----------------------------------------*/
+/*-------------Site title---------------*/
+main .site-title{
+
+    background: url(../assets/Background-image.png);
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+
+main .site-background{
+
+    padding-top: 10rem;
+    text-align: center;
+    color: white;
+
+}
+
+main .site-title h3,h1{
+
+    margin: .3rem;
+}
+
+main .site-title .btn{
+
+    margin: 1.8rem;
+    background: var(--sky);
+
+}
+
+main .site-title .btn:hover{
+
+        background: transparent;
+        color: var(--white);
+        border: 1px solid rgb(255, 255, 255);
+
+}
+/*-------------Site title---------------*/
+
+/*.....................Blog carosel.................*/
+main .blog{
+
+    background: url(../assets/Abract01.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+}
+
+main .blog .blog-post{
+
+    padding-top: 6rem;
+
+}
+
+main .blog-post .blog-content{
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 38%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+main .blog-content .blog-title{
+
+    padding: 2rem 0;
+}
+
+main .blog-content .btn-blog{
+
+    padding: .7rem 2rem;
+    margin: .5rem; 
+}
+
+main .blog-content span{
+
+    display: block;
+}
+
+/*.....................Blog post.................*/
+
+/* ------------------Main Content----------------------------------------*/
+
+
+/*             Viewpoint less than or eqal to 750px          */
+@media only screen and (max-width:750px) {
+
+    .nav .nav-menu, .nav .nav-items{
+
+        flex-direction: column;
+    }
+
+    .nav .toggle-collapce{
+
+        display: initial;
+
+    }
+    
+}
+
+/*             Viewpoint less than or eqal to 750px          */
