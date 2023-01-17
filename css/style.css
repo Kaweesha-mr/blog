@@ -1,0 +1,66 @@
+html,body{
+
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+/*.......................gloable classes...................*/
+
+a{
+    text-decoration: none;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+ul{
+        
+    list-style: none;
+
+}
+
+/*.......................gloable classes...................*/
+
+/*.............................navigation bar.............................*/
+
+.nav{
+
+    background: white;
+    padding: 1rem;
+    height: 40rem;
+    min-height: 10vh;
+    overflow: hidden;
+}
+.nav-brand a{
+
+    font-size: 1.5rem;
+    padding: 1rem;
+    display: block;
+}
+
+.nav-menu{
+    justify-content: space-between;
+   
+}
+
+.nav-items{
+
+    display: flex;
+    margin: 0;
+}
+
+.nav-link{
+
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.social{
+    padding: 1.4rem;
+
+}
+/*.............................navigation bar.............................*/
